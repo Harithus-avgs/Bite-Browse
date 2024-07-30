@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .restaurant-list-container {
@@ -9,7 +10,7 @@ body {
 }
 
 .banner-container {
-  height: 421px;
+  height: auto; /* Adjust height to fit content */
   background: no-repeat center center/cover;
   display: flex;
   flex-direction: column;
@@ -20,33 +21,33 @@ body {
 }
 
 .zomato-logo {
-  max-width: 250px;
+  max-width: 200px; /* Adjust logo size */
   margin-bottom: 15px;
 }
 
 .banner-text {
-  font-size: 32px;
+  font-size: 24px; /* Adjust font size for mobile */
   color: #ffffff;
   margin: 15px 0;
   text-align: center;
-  width: 100%;
-  max-width: 80%;
+  width: 90%; /* Adjust width for mobile */
   line-height: 1.2;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 15px; /* Adjust padding */
   font-family: Okra, Helvetica, sans-serif;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .search-container {
   display: flex;
-  align-items: center;
-  width: 70%;
-  max-width: 700px;
+  flex-direction: column; /* Stack search fields vertically */
+  align-items: stretch; /* Full width for children */
+  width: 90%; /* Adjust width */
+  max-width: 100%; /* Remove max-width constraint */
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 8px;
+  padding: 10px;
 }
 
 .search-term,
@@ -57,21 +58,21 @@ body {
   border-radius: 8px;
   outline: none;
   background: #ffffff;
+  margin: 5px 0; /* Adjust margin for spacing */
 }
 
 .search-term {
-  flex: 3;
-  border-radius: 8px 0 0 8px;
+  flex: 1;
+  border-radius: 8px 8px 0 0;
 }
 
 .location-term {
-  flex: 1;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 0 8px 8px;
 }
 
 .filter-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack filter items vertically */
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -81,7 +82,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 25px;
-  width: 150px;
+  width: 100%; /* Full width */
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
 }
@@ -94,10 +95,10 @@ body {
 
 .restaurant-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
-  max-width: 990px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust min-width */
+  gap: 15px;
+  padding: 15px; /* Reduce padding */
+  max-width: 100%; /* Ensure full width */
   margin: 0 auto;
 }
 
@@ -107,15 +108,13 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 100%;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .restaurant-item img {
   width: 100%;
-  height: 200px;
+  height: auto; /* Adjust image height */
   object-fit: cover;
-  border-radius: 10px 10px 10px 10px;
 }
 
 .info {
@@ -132,7 +131,7 @@ body {
 
 .restaurant-name {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px; /* Adjust font size */
   font-weight: bold;
   text-decoration: none;
 }
@@ -154,14 +153,12 @@ body {
 
 .restaurant-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack details vertically */
   margin-top: 10px;
   font-size: 14px;
 }
 
 .location {
-  flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -180,11 +177,12 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  flex-wrap: wrap; /* Wrap pagination buttons if needed */
 }
 
 .pagination button {
-  padding: 10px 15px;
-  margin: 0 5px;
+  padding: 8px 12px; /* Adjust button padding */
+  margin: 2px;
   font-size: 14px;
   border: none;
   background-color: transparent;
@@ -224,12 +222,13 @@ body {
   background: white;
   padding: 20px;
   border-radius: 15px;
-  width: 300px;
+  width: 90%; /* Adjust width */
+  max-width: 400px; /* Set a maximum width */
   text-align: center;
 }
 
 .modal-content select {
-  width: 100%;
+  width: 100%; /* Full width */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -267,27 +266,28 @@ body {
 
 .filter-buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack filter buttons vertically */
+  align-items: center;
   margin-top: 20px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .banner-container {
-    height: auto;
     padding: 20px 10px;
   }
 
+  .zomato-logo {
+    max-width: 150px; /* Adjust logo size */
+  }
+
   .banner-text {
-    font-size: 24px;
+    font-size: 20px; /* Adjust font size */
     padding: 0 10px;
-    margin-bottom: 20px;
   }
 
   .search-container {
-    width: 90%;
-    max-width: none;
-    flex-direction: column;
+    width: 100%;
     padding: 10px;
   }
 
@@ -298,27 +298,34 @@ body {
   }
 
   .filter-container {
-    flex-direction: column;
-    gap: 5px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filter-dropdown {
+    width: 100%;
   }
 
   .restaurant-list {
-    grid-template-columns: 1fr;
-    padding: 15px;
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 10px; /* Reduce padding */
   }
 
   .restaurant-item img {
-    height: auto;
+    height: 150px; /* Adjust image height */
   }
 
   .restaurant-details {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .pagination {
+    flex-direction: column;
   }
 
   .pagination button {
     padding: 8px 12px;
-    margin: 2px;
+    margin: 5px 0;
   }
 
   .modal-content {
