@@ -162,7 +162,7 @@ const RestaurantList = () => {
           </select>
           <input
             type="text"
-            placeholder="Search for restaurant, cuisine or a dish"
+            placeholder="Search for  a restaurant"
             className="search-term"
             onChange={(e) => {setSearch(e.target.value);
               
