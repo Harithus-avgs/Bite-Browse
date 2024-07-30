@@ -42,7 +42,7 @@ const RestaurantList = () => {
       if (country) {
         try {
           const response = await axios.get(
-            `http://localhost:3000/countries/${country}`
+            `https://zomato-clone-t5zc.onrender.com/countries/${country}`
           );
           setCountryCode(response.data.code);
           console.log(response.data.code);
@@ -61,7 +61,7 @@ const RestaurantList = () => {
     const fetchOptions = async () => {
       try {
         const cuisineResponse = await axios.get(
-          `http://localhost:3000/restaurants/cuisine-options?country_id=${countryCode}`
+          `https://zomato-clone-t5zc.onrender.com/restaurants/cuisine-options?country_id=${countryCode}`
         );
         setCuisineOptions(cuisineResponse.data);
       } catch (error) {
@@ -86,7 +86,7 @@ const RestaurantList = () => {
     });
 
     axios
-      .get(`http://localhost:3000/restaurants?${queryParams.toString()}`)
+      .get(`https://zomato-clone-t5zc.onrender.com/restaurants?${queryParams.toString()}`)
       .then((response) => {
         setRestaurants(response.data.restaurants);
         setTotalPages(response.data.totalPages);

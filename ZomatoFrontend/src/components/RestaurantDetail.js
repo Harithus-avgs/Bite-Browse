@@ -33,7 +33,7 @@ const RestaurantDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/restaurants/${id}`)
+      .get(`https://zomato-clone-t5zc.onrender.com/restaurants/${id}`)
       .then((response) => {
         setRestaurant(response.data);
         setLoading(false);
