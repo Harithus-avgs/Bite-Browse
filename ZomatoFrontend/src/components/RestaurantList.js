@@ -199,16 +199,15 @@ const RestaurantList = () => {
               defaultValue={selectedCost}
             >
               <option value="1000000000000">Select Cost</option>
-              <option value="100">100</option>
-              <option value="200">200</option>
-              <option value="500">500</option>
-              <option value="1000">1000</option>
-              <option value="2000">2000</option>
-              <option value="4000">3000</option>
-              <option value="5000">5000</option>
-              <option value="10000">10000</option>
-              <option value="20000">20000</option>
-              <option value="50000">50000</option>
+              <option value="100">&lt;100</option>
+              <option value="200">&lt;200</option>
+              <option value="500">&lt;500</option>
+              <option value="1000">&lt;1000</option>
+              <option value="2000">&lt;2000</option>
+              <option value="5000">&lt;5000</option>
+              <option value="10000">&lt;10000</option>
+              <option value="20000">&lt;20000</option>
+              <option value="50000">&lt;50000</option>
               {/* {costOptions.map((option) => (
                 <option key={option} value={option || "100000000000"}>{option || 'None'}</option>
               ))} */}
