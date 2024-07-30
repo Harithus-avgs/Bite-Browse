@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.restaurant-list-container {
+  text-align: center;
+  margin: 0;
+}
+
+.banner-container {
+  height: 421px;
+  background: no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.zomato-logo {
+  max-width: 250px;
+  margin-bottom: 15px;
+}
+
+.banner-text {
+  font-size: 32px;
+  color: #ffffff;
+  margin: 15px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 80%;
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 0 20px;
+  font-family: Okra, Helvetica, sans-serif;
+  margin-bottom: 25px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+.search-term,
+.location-term {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+}
+
+.search-term {
+  flex: 3;
+  border-radius: 8px 0 0 8px;
+}
+
+.location-term {
+  flex: 1;
+  border-radius: 0 8px 8px 0;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.separator {
+  font-size: 16px;
+  color: #ccc;
+  margin: 0 8px;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.restaurant-item {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.restaurant-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.info {
+  padding: 15px;
+  text-align: left;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.restaurant-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.restaurant-rating {
+  background-color: #267e3e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.restaurant-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.location {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.average-cost {
+  font-weight: bold;
+}
+
+.restaurant-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  border-radius: 8px;
+}
+
+.pagination button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  font-weight: bold;
+}
+
+.restaurant-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  margin-bottom: 10px;
+}
+
+.modal-close {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button styles */
+.filter-button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

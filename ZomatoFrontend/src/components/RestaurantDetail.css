@@ -1,0 +1,143 @@
+.restaurant-detail {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background-color: #f8f9fa;  */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.restaurant-info,
+.extras-container,
+.reviews-container {
+  flex: 1;
+  min-width: 300px;
+  background: #2b67671d;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  margin: 0 auto;
+  border-style: groove;
+}
+
+.restaurant-info h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-item p,
+.info-item a {
+  margin: 0;
+}
+
+.info-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.star-rating {
+  color: #f5c518;
+  margin-left: 5px;
+}
+
+.extras-container .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.extras-container .info-item strong {
+  margin-right: 10px;
+  align-items: center;
+}
+
+.action-button {
+  background-color: #2b67671d;
+  color: rgb(12, 12, 12);
+  border-style: double;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 150px;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.reviews-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.review {
+  background-color: #f1f3f5;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 50px;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
