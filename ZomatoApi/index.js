@@ -11,8 +11,8 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-const restaurantRoutes = require("../routes/restaurants");
-const countryRoutes = require("../routes/countries");
+const restaurantRoutes = require("./routes/restaurants");
+const countryRoutes = require("./routes/countries");
 app.use("/restaurants", restaurantRoutes);
 app.use("/countries", countryRoutes);
 
