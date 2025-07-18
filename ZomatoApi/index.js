@@ -6,7 +6,7 @@ require('dotenv').config();
 
 
 const app = express();
-const port = process.env.PORT;
+const port = 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -19,9 +19,7 @@ app.use("/countries", countryRoutes);
 // MongoDB connection
 const URI = process.env.MONGODB_URL;
 mongoose
-  .connect(
-    URI,
-    { useNewUrlParser: true, useUnifiedTopology: true }
+  .connect( "mongodb+srv://admin:root@cluster0.rxhohcp.mongodb.net/zomato?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
@@ -36,5 +34,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://localhost:${3000}`);
 });
